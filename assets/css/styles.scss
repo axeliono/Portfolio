@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&display=swap");
-$primary-color: rgb(35, 128, 204);
-$secondary-color: rgb(53, 53, 53);
+$primary-color: rgb(46, 30, 12);
+$secondary-color: rgb(90, 89, 89);
+$tertiary-color: rgb(134, 106, 45);
 
 * {
   margin: 0;
@@ -12,15 +13,12 @@ body {
   font-family: "Merriweather", serif;
   background: url("../images/background-blur-bright-684314.jpg");
   background-size: cover;
-  background-position: bottom;
-  color: black;
 }
 
 header {
-  padding: 10px 0;
+  padding: 2rem 1rem 4rem 1rem;
 
   .header-container {
-    width: 90%;
     margin: auto;
     overflow: hidden;
     display: flex;
@@ -39,39 +37,73 @@ header {
     }
   }
 }
-
-.main-grid {
-  display: grid;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-
-  grid-template-areas:
-    "background-title background-text background-text background-text"
-    "project-title project-container project-container project-container"
-    "project-title project-container project-container project-container"
-    "contact-info-title contacts contacts contacts";
+.main-section {
+  max-width: 88%;
+  margin: 0 auto 0 auto;
 }
+.page-section {
+  margin: 25px 0;
+  padding: 10px 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: space-between;
 
-.background-title {
-  grid-area: background-title;
-}
+  h2 {
+    flex: 0 0 20%;
+    text-align: right;
+    padding-right: 15px;
+    border-right: 4px solid $primary-color;
+    font-size: 4vw;
+    line-height: 1.1;
+  }
 
-.background-text {
-  grid-area: background-text;
-}
+  div {
+    flex: 0 0 77%;
+  }
 
-.project-title {
-  grid-area: project-title;
+  p {
+    margin-bottom: 20px;
+  }
 }
 
 .project-container {
-  grid-area: project-container;
+  display: grid;
+  column-gap: 10px;
+  row-gap: 10px;
+  grid-auto-flow: dense;
+
+  grid-template-columns: repeat(12, 1fr);
+  grid-auto-rows: minmax(150px, 1fr);
 }
 
-.contact-info-title {
-  grid-area: contact-info-title;
+.grid-item {
+  border: 5px solid $primary-color;
+  grid-column: span 4;
+  background-color: $secondary-color;
+  color: $tertiary-color;
+  min-height: 150px;
+  display: flex;
+  align-items: flex-end;
+  padding: 0 0 20px 0;
+  text-decoration: none;
+  background-blend-mode: soft-light;
+  background-size: 150%;
+  transition: all 0.5s;
+  font-size: 0.9rem;
 }
 
-.contacts {
-  grid-area: contacts;
+.grid-item:first-child {
+  grid-column: span 8;
+  grid-row: span 2;
+}
+
+.grid-item:hover {
+  background-color: rgba($color: #000000, $alpha: 0.3);
+  cursor: pointer;
+}
+
+.grid-item div {
+  background-color: $primary-color;
+  padding: 8px 10px;
 }
