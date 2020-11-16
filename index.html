@@ -12,31 +12,17 @@
   </head>
   <body>
     <header>
-      <div class="header-container">
-        <div class="branding">
-          <h1>Chandler Green</h1>
-        </div>
-        <nav class="header-nav">
-          <ul>
-            <li>
-              <a href="index.html">Home</a>
-            </li>
-            <li>
-              <a href="#">Background</a>
-            </li>
-            <li>
-              <a href="#">Projects</a>
-            </li>
-            <li>
-              <a href="#">Contact Info</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
+      <h1>Chandler Green</h1>
+      <nav class="header-nav">
+        <a href="index.html">Resume</a>
+        <a href="#">Background</a>
+        <a href="#">Projects</a>
+        <a href="#">Contact Info</a>
+      </nav>
     </header>
 
     <main class="main-section">
-      <section class="background page-section">
+      <section class="background page-section" id="about">
         <h2>Background</h2>
 
         <div class="background-text">
@@ -62,23 +48,41 @@
         </div>
       </section>
 
-      <section class="projects page-section">
+      <section class="projects page-section" id="projects">
         <h2>Projects</h2>
 
         <div class="project-container">
-          <div class="grid-item">weather dashboard</div>
+          <a
+            href="https://axeliono.github.io/group-project-1/"
+            class="grid-item meal-queue"
+          >
+            <div>
+              <h3>Meal Queue</h3>
+              <span>SASS/HTML/CSS/JavaScript</span>
+            </div>
+          </a>
+          <a href="#" class="grid-item weather-dashboard">
+            <div class="grid-item weather-dashboard">
+              <h3>Weather Dashboard</h3>
+              <span>HTML/CSS/JavaScript</span>
+            </div>
+          </a>
+
           <div class="grid-item">password-generator</div>
-          <div class="grid-item">meal math</div>
         </div>
       </section>
 
-      <section class="contact-info page-section">
+      <section class="contact-info page-section" id="contact">
         <h2>Contact Info</h2>
-
-        <div class="contacts">
-          <p>832.792.4213</p>
-          <p>Github</p>
-          <p>chandlerEgreen</p>
+        <div>
+          <address>
+            <a href="tel:+8327924213">832.792.4213</a>
+            <a href="mailto:chandlerevangreen@gmail.com"
+              >chandlerevangreen@gmail.com</a
+            >
+            <a href="">Github</a>
+            <a href="#">Twitter</a>
+          </address>
         </div>
       </section>
     </main>
